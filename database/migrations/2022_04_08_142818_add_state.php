@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::table('cities', function (Blueprint $table) {
             $table->foreignId('state_id')->nullable()->constrained()->nullOnDelete();
-     
         });
     }
 
@@ -28,7 +27,6 @@ return new class extends Migration
     {
         Schema::table('cities', function (Blueprint $table) {
             $table->removeColumn('state_id');
-    
         });
     }
 };
